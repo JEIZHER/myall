@@ -1,6 +1,7 @@
-import { CompleteIcon } from "./CompleteIcon";
+import { CompleteIcon } from "../Todoicon/CompleteIcon";
+import { DeleteIcon } from "../Todoicon/DeleteIcon";
 import "./TodoItem.css";
-import { DeleteIcon } from "./DeleteIcon";
+
 function TodoItem(props) {
   return (
     <li className="TodoItem">

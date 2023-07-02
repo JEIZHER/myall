@@ -1,7 +1,5 @@
 import React from "react";
 function useLocalStorage(itemName, initialValue) {
-  //let parsedItem;
-  // const localStorageItem = localStorage.getItem(itemName);
   const [item, setItem] = React.useState(initialValue);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(false);
@@ -11,7 +9,7 @@ function useLocalStorage(itemName, initialValue) {
       try {
         const localStorageItem = localStorage.getItem(itemName);
         let parsedItem;
-        parsedItem = localStorageItem ? JSON.parse(localStorageItem) : []; //JSON.stringify(initialValue);
+        parsedItem = localStorageItem ? JSON.parse(localStorageItem) : [];
         setItem(parsedItem);
         setLoading(false);
       } catch (error) {
@@ -19,9 +17,8 @@ function useLocalStorage(itemName, initialValue) {
         setError(true);
       }
     }, 2000);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // const [item, setItem] = React.useState(parsedItem);
   const saveItem = (newItem) => {
     localStorage.setItem(itemName, JSON.stringify(newItem));
     setItem(newItem);

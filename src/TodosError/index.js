@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-
+import React from "react";
 
 function TodosError() {
-
-   return ( <p>ocurrio un error ...</p>)
+  return <p>ocurrio un error ...</p>;
 }
 
 export { TodosError };

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Documentos/Joseph_Cursos/myall/build/static/css/main.2b051c49.css",
+    "main.js": "/Documentos/Joseph_Cursos/myall/build/static/js/main.9f97575f.js",
+    "index.html": "/Documentos/Joseph_Cursos/myall/build/index.html",
+    "static/media/delete.svg": "/Documentos/Joseph_Cursos/myall/build/static/media/delete.67697f56fd2f149bc9515a879062ad5c.svg",
+    "static/media/check.svg": "/Documentos/Joseph_Cursos/myall/build/static/media/check.23109d14544b9bb9b3d5d4e65ea13701.svg",
+    "main.2b051c49.css.map": "/Documentos/Joseph_Cursos/myall/build/static/css/main.2b051c49.css.map",
+    "main.9f97575f.js.map": "/Documentos/Joseph_Cursos/myall/build/static/js/main.9f97575f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b051c49.css",
+    "static/js/main.9f97575f.js"
+  ]
+}

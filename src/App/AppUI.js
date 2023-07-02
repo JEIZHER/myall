@@ -7,19 +7,15 @@ import { TodosLoading } from "../TodosLoading";
 import { TodosError } from "../TodosError";
 import { EmptyTodos } from "../EmptyTodos";
 import { CreateTodoButton } from "../CreateTodoButton";
+import {TodoForm} from "../TodoForm";
+import { Modal } from "../Modal";
 import { TodoContex } from "../TodoContex";
-
 function AppUI() {
   return (
     <React.Fragment>
-       
-          <TodoCounter/>
-   
-      
+      <TodoCounter />
 
-     
-          <TodoSearch />
-    
+      <TodoSearch />
 
       <TodoContex.Consumer>
         {({ loading, error, searchedTodos, completeTodo, deleteTodo }) => (
@@ -41,16 +37,23 @@ function AppUI() {
       </TodoContex.Consumer>
 
       <TodoContex.Consumer>
-        {({ searchValue, setSearchValue, saveTodos, todos }) => (
+      {/* ,searchValue, setSearchValue, saveTodos, todos , */}
+        {({ openModal,setOpenModal}) => (
           <CreateTodoButton
-            todos={todos}
-            setTodos={saveTodos}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
+            // todos={todos}
+            // setTodos={saveTodos}
+            // searchValue={searchValue}
+            // setSearchValue={setSearchValue}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
           />
         )}
       </TodoContex.Consumer>
-      
+
+      <TodoContex.Consumer> 
+     {({openModal})=>(openModal && (<Modal  >< TodoForm/> </Modal>))}    
+     </TodoContex.Consumer>
+
     </React.Fragment>
   );
 }

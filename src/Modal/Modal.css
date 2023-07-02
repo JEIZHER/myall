@@ -1,0 +1,16 @@
+.ModalBackgroundStyle{
+background-color: rgb(211, 211, 240);
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+border-radius: 15px;
+opacity: 85%;
+position: fixed;
+top:0;
+right: 0;
+left:0 ;
+bottom: 0;
+
+
+}

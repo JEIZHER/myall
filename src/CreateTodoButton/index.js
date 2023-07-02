@@ -1,29 +1,30 @@
 import "./CreateTodoButton.css";
 
+
 function CreateTodoButton({
-  todos,
-  setTodos,
-  searchValue,
-  setSearchValue
+  // todos,
+  // setTodos,
+  // searchValue,
+  // setSearchValue,
+   //  openModal, 
+     setOpenModal
+
 }) {
-  //let newnew
-  const nuevoTodo = {
-    text: searchValue,
-    completed: false,
-  };
+  
+  // const nuevoTodo = {
+  //   text: searchValue,
+  //   completed: false,
+  // };
   return (
     <button
       className="CreateTodoButton"
-      onClick={() => {
-        // solucion mamarracha, si todos ya tiene la informacion adelantada porque no se gusda directamente en el localstorage
-        searchValue && setTodos(todos.concat(nuevoTodo));
-      //   const dataLS = JSON.parse(localStorage.getItem('TODOS_V1')).concat(nuevoTodo);
-      //   newnew = JSON.stringify(dataLS);
-      //  localStorage.setItem('TODOS_V1', newnew); 
-      
-        
-        setSearchValue("");
-        
+      onClick={() => { 
+        setOpenModal(state=>!state);
+      //  setOpenModal(!openModal);
+       // openModal? setOpenModal(false):setOpenModal(true) ; 
+       
+        //  searchValue && setTodos(todos.concat(nuevoTodo));   
+        //  setSearchValue("");     
       }}
     >
       + 
